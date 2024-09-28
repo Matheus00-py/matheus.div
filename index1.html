@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input class="login" type="text" placeholder="Usuario" name="usu" id="usu">
+        <br><br>
+        <input class="login" type="password" placeholder="Senha" name="senha" id="senha">
+        <br><br>
+        <p class="p"> Lembre-me da minha senha <input type="checkbox" name="" id="" onclick="esqueceuasenha()"> </p>
+        <input class="botao" id="botao" type="button" value="enviar" onclick="enviar()">
+        <p class="eqs"> esqueceu a senha? <a href="senha.com">click aqui!</a> </p>
+
+    </div>
+
+
+    <footer>
+
+        <script>
+            function enviar() {
+                var u = window.document.getElementById('usu').value;
+                var s = window.document.getElementById('senha').value;
+
+
+                if (u == 'admin' && s == '123456') {
+                    location.href = 'home.html'
+                }
+                else {
+                    alert('usuario ou senha errado!')
+                }
+            }
+
+            function esqueceuasenha() {
+                alert('irei te lembrar da sua senha!')
+            }
+
+        </script>
+    </footer>
+</body>
+</html>
